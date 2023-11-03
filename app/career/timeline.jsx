@@ -1,6 +1,6 @@
 function Timeline() {
   return (
-    <table width={640}>
+    <table width={640} className="">
       <tbody>
         <tr>
           <td className="pr-8">2024</td>

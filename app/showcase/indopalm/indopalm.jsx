@@ -40,7 +40,7 @@ function Indopalm() {
           Company Profile of the Leading Manufacturer and Wholesale Supplier for
           Indonesian Coconut Charcoal Briquettes.
         </p>
-        <div className="flex justify-between mt-4">
+        <div className="flex flex-wrap gap-4 justify-between mt-4">
           <div className="flex gap-2">
             {indopalmStack.map((skill, index) => (
               <SkillBadge

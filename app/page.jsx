@@ -4,24 +4,20 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 select-none cursor-default">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono  lg:flex">
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a className="pointer-events-none text-lg flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0">
+    <main className="flex min-h-screen flex-col items-center justify-between select-none cursor-default lg:p-24">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
+        <div className="flex w-full items-end justify-start">
+          <a className="pointer-events-none text-lg flex place-items-center gap-2 pt-8 px-8">
             Adv.
           </a>
         </div>
       </div>
 
       <div className="">
-        <div className="flex flex-col items-center justify-center text-center w-[580px]">
-          {/* <p className="opacity-25 leading-relaxed mb-4 uppercase tracking-widest">
-            Frontend Developer
-          </p> */}
-          {/* <p className=" text-gray-500 leading-relaxed tracking-[8px] uppercase mb-4">
-            Frontend Developer
-          </p> */}
-          <h1 className="text-6xl mb-6 font-semibold">Advie Rifaldy</h1>
+        <div className="flex flex-col items-center justify-center text-center w-full lg:w-[580px] mt-24 lg:mt-0">
+          <h1 className="text-4xl lg:text-6xl mb-6 font-semibold">
+            Advie Rifaldy
+          </h1>
           <p className=" text-gray-500 leading-relaxed tracking-wide">
             Hey there, I'm Advie, your friendly front-end wizard! <br /> Take a
             stroll through my creations, find your inspiration, and <br />
@@ -40,7 +36,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="mb-32 grid text-center mt-32 lg:mt-0 lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <Link
           href="/about"
           className="group rounded-lg border border-transparent px-5 py-4 card-hover"

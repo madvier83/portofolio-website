@@ -159,54 +159,24 @@ export default function About() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-24">
-      <div className="z-10 max-w-5xl w-full items-center font-mono text-sm lg:flex justify-between">
-        {/* <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p> */}
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none text-gray-500">
-          <Link
-            className="pointer-events-none text-lg flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="/"
-            rel="noopener noreferrer"
-          >
-            <span className="rotate-180 text-sm font-semibold inline-block transition-transform motion-reduce:transform-none">
-              -
-            </span>
-            Home
-          </Link>
-        </div>
-
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none text-gray-500">
-          <Link
-            className="pointer-events-none text-lg flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="/"
-            rel="noopener noreferrer"
-          >
-            Adv.
-          </Link>
-        </div>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none text-gray-500">
-          <Link
-            className="pointer-events-none text-lg flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="/showcase"
-            rel="noopener noreferrer"
-          >
-            Portofolio
-            <span className="text-sm font-semibold inline-block transition-transform motion-reduce:transform-none">
-              -
-            </span>
-          </Link>
-        </div>
+    <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono mt-8">
+        <Link
+          href="/"
+          className="cursor-pointer text-lg gap-2 pt-8 px-4 lg:px-8"
+        >
+          Adv.
+        </Link>
       </div>
 
       <div className="">
-        <div className="flex flex-col w-[640px] mt-32">
+        <div className="flex flex-col w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
           {/* <p className="opacity-25 leading-relaxed mb-4 uppercase tracking-widest">
             Frontend Developer
           </p> */}
-          <h1 className="text-6xl mb-8 font-semibold">Introduction</h1>
+          <h1 className="text-5xl lg:text-6xl mb-8 font-semibold">
+            Introduction
+          </h1>
           {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
 
           <div className=" text-gray-500 text- flex flex-col gap-4 leading-relaxed tracking-wide">
@@ -242,10 +212,16 @@ export default function About() {
             </div>
           </div>
 
-          <div className="opacity-80 pt-4  flex gap-2">
+          <div className="opacity-80 pt-4 flex gap-2">
             <p className="bg-gray-900 bg-opacity-80 rounded-lg card-hover border border-transparent">
               <img
+                className="hidden lg:block"
                 src="https://github-readme-stats.vercel.app/api/top-langs?username=madvier83&locale=en&layout=compact&theme=dark&hide_border=true&bg_color=00000000&card_width=800"
+                alt="madvier83"
+              />
+              <img
+                className="block lg:hidden"
+                src="https://github-readme-stats.vercel.app/api/top-langs?username=madvier83&locale=en&layout=compact&theme=dark&hide_border=true&bg_color=00000000&card_width=400"
                 alt="madvier83"
               />
             </p>
@@ -291,7 +267,7 @@ export default function About() {
 
           <Link
             href="/showcase"
-            className="card-hover mt-32 p-4 px-8 rounded-lg bg-indigo-500 border border-indigo-100 text-black hover:text-white font-bold text-lg cursor-pointer"
+            className="card-hover my-32 p-4 px-8 rounded-lg bg-indigo-700 border border-indigo-100 text-white hover:text-white font-bold text-lg cursor-pointer"
           >
             Next Topic - Portofolio
           </Link>
