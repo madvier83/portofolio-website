@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,7 +16,12 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.card-hover {
+  @apply transition-colors border-transparent duration-500 border rounded-lg hover:border hover:border-gray-800 hover:bg-gray-900 hover:bg-opacity-40;
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +30,45 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  /* overflow: hidden; */
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+.paragraph {
+  @apply leading-relaxed tracking-wide;
+}
+.image-card {
+  @apply rounded-lg flex-col bg-black flex items-center justify-center overflow-hidden;
+}
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #af4848;
+  transform-origin: left;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #0f3cb9;
+  transform-origin: right;
 }
