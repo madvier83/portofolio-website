@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import SkillBadge from "../../components/skill_badge";
+import { motion } from "framer-motion";
 
 export default function About() {
   const skills = [
@@ -159,143 +160,150 @@ export default function About() {
   ];
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
-        <div className="flex w-full items-end justify-start">
-          <Link
-            href={"/"}
-            className="text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8"
-          >
-            Adv.
-          </Link>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2, delay: 0.3 }}
+      exit={{ opacity: 0 }}
+    >
+      <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
+        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
+          <div className="flex w-full items-end justify-start">
+            <Link
+              href={"/"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+            >
+              Adv.
+            </Link>
 
-          <div className="flex ml-auto">
-            <Link
-              href={"/showcase"}
-              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
-            >
-              Portofolio
-            </Link>
-            <Link
-              href={"/career"}
-              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
-            >
-              Career
-            </Link>
-            <Link
-              href={"/connect"}
-              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
-            >
-              Connect
-            </Link>
+            <div className="flex ml-auto">
+              <Link
+                href={"/showcase"}
+                className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+              >
+                Portofolio
+              </Link>
+              <Link
+                href={"/career"}
+                className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+              >
+                Career
+              </Link>
+              <Link
+                href={"/connect"}
+                className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+              >
+                Connect
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="">
-        <div className="flex flex-col w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
-          {/* <p className="opacity-25 leading-relaxed mb-4 uppercase tracking-widest">
+        <div className="">
+          <div className="flex flex-col w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
+            {/* <p className="opacity-25 leading-relaxed mb-4 uppercase tracking-widest">
             Frontend Developer
           </p> */}
-          <h1 className="text-5xl lg:text-6xl mb-8 font-semibold">
-            Introduction
-          </h1>
-          {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
+            <h1 className="text-5xl lg:text-6xl mb-8 font-semibold">
+              Introduction
+            </h1>
+            {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
 
-          <div className=" text-gray-500 text- flex flex-col gap-4 leading-relaxed tracking-wide">
-            <p className="">
-              I'm Muhammad Advie Rifaldy, an IT student from Indonesia, with a
-              strong dedication to frontend development. Over the past 5 years,
-              I've passionately nurtured my love for programming, building a
-              solid foundation in this field.
-            </p>
-            <p className="">
-              My skill set is complemented by a keen problem-solving aptitude,
-              enabling me to assess challenges, pinpoint areas in need of
-              enhancement, and adeptly apply solutions.
-            </p>
-          </div>
+            <div className=" text-gray-500 text- flex flex-col gap-4 leading-relaxed tracking-wide">
+              <p className="">
+                I'm Muhammad Advie Rifaldy, an IT student from Indonesia, with a
+                strong dedication to frontend development. Over the past 5
+                years, I've passionately nurtured my love for programming,
+                building a solid foundation in this field.
+              </p>
+              <p className="">
+                My skill set is complemented by a keen problem-solving aptitude,
+                enabling me to assess challenges, pinpoint areas in need of
+                enhancement, and adeptly apply solutions.
+              </p>
+            </div>
 
-          <h1 className="text-3xl mb-8 font-semibold mt-24">
-            Technical Skills
-          </h1>
+            <h1 className="text-3xl mb-8 font-semibold mt-24">
+              Technical Skills
+            </h1>
 
-          <div className="opacity-80 text-justify text-gray-500 text-sm flex flex-col gap-4 leading-relaxed tracking-wide">
-            <div className="flex">
-              <div className="flex w-full flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <SkillBadge
-                    key={index}
-                    img={skill.img}
-                    url={skill.url}
-                    alt={skill.alt}
-                  />
-                ))}
+            <div className="opacity-80 text-justify text-gray-500 text-sm flex flex-col gap-4 leading-relaxed tracking-wide">
+              <div className="flex">
+                <div className="flex w-full flex-wrap gap-2">
+                  {skills.map((skill, index) => (
+                    <SkillBadge
+                      key={index}
+                      img={skill.img}
+                      url={skill.url}
+                      alt={skill.alt}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="opacity-80 pt-4 flex gap-2">
-            <p className="bg-gray-900 bg-opacity-80 rounded-lg card-hover border border-transparent">
-              <img
-                className="hidden lg:block"
-                src="https://github-readme-stats.vercel.app/api/top-langs?username=madvier83&locale=en&layout=compact&theme=dark&hide_border=true&bg_color=00000000&card_width=800"
-                alt="madvier83"
-              />
-              <img
-                className="block lg:hidden"
-                src="https://github-readme-stats.vercel.app/api/top-langs?username=madvier83&locale=en&layout=compact&theme=dark&hide_border=true&bg_color=00000000&card_width=400"
-                alt="madvier83"
-              />
-            </p>
-          </div>
-
-          <h1 className="text-3xl mb-8 font-semibold mt-24">Achievement</h1>
-
-          <div className="opacity-80 p-4 flex gap-2 bg-gray-900 bg-opacity-80 rounded-lg card-hover border border-transparent">
-            <p align="left">
-              {" "}
-              <a href="https://github.com/ryo-ma/github-profile-trophy">
+            <div className="opacity-80 pt-4 flex gap-2">
+              <p className="bg-gray-900 bg-opacity-80 rounded-lg card-hover border border-transparent">
                 <img
-                  src="https://github-profile-trophy.vercel.app/?username=madvier83&title=MultiLanguage,Repositories,Experience,Commits,Stars,Followers&theme=matrix&no-bg=true&no-frame=true"
+                  className="hidden lg:block"
+                  src="https://github-readme-stats.vercel.app/api/top-langs?username=madvier83&locale=en&layout=compact&theme=dark&hide_border=true&bg_color=00000000&card_width=800"
                   alt="madvier83"
                 />
-              </a>{" "}
-            </p>
-          </div>
+                <img
+                  className="block lg:hidden"
+                  src="https://github-readme-stats.vercel.app/api/top-langs?username=madvier83&locale=en&layout=compact&theme=dark&hide_border=true&bg_color=00000000&card_width=400"
+                  alt="madvier83"
+                />
+              </p>
+            </div>
 
-          <div className="flex gap-2 mt-4">
-            <div className="card-hover w-40 text-xs text-gray-500 bg-gray-900 bg-opacity-80">
-              <img
-                src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhkODlvaTAwMDE3MDlpZjdsdWxhNHV5IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0="
-                alt=""
-              />
-              <p className="px-4 pb-2">Hacktoberfest 2022: Level 2</p>
-            </div>
-            <div className="card-hover w-40 text-xs text-gray-500 bg-gray-900 bg-opacity-80">
-              <img
-                src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhkNmZycXowMTgxMDltaGFleGpmczRwIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0="
-                alt=""
-              />
-              <p className="px-4 pb-2">Hacktoberfest 2022: Level 1</p>
-            </div>
-            <div className="card-hover w-40 text-xs text-gray-500 bg-gray-900 bg-opacity-80">
-              <img
-                src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhlcTN6OWMwMzU3MDlsM2Z4OTluOHg2IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0="
-                alt=""
-              />
-              <p className="px-4 pb-2">Hacktoberfest 2022: Registered</p>
-            </div>
-          </div>
+            <h1 className="text-3xl mb-8 font-semibold mt-24">Achievement</h1>
 
-          <Link
-            href="/showcase"
-            className="card-hover my-32 p-4 px-8 rounded-lg bg-indigo-700 border border-indigo-100 text-white hover:text-white font-bold text-lg cursor-pointer"
-          >
-            Next Topic - Portofolio
-          </Link>
+            <div className="opacity-80 p-4 flex gap-2 bg-gray-900 bg-opacity-80 rounded-lg card-hover border border-transparent">
+              <p align="left">
+                {" "}
+                <a href="https://github.com/ryo-ma/github-profile-trophy">
+                  <img
+                    src="https://github-profile-trophy.vercel.app/?username=madvier83&title=MultiLanguage,Repositories,Experience,Commits,Stars,Followers&theme=matrix&no-bg=true&no-frame=true"
+                    alt="madvier83"
+                  />
+                </a>{" "}
+              </p>
+            </div>
+
+            <div className="flex gap-2 mt-4">
+              <div className="card-hover w-40 text-xs text-gray-500 bg-gray-900 bg-opacity-80">
+                <img
+                  src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhkODlvaTAwMDE3MDlpZjdsdWxhNHV5IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0="
+                  alt=""
+                />
+                <p className="px-4 pb-2">Hacktoberfest 2022: Level 2</p>
+              </div>
+              <div className="card-hover w-40 text-xs text-gray-500 bg-gray-900 bg-opacity-80">
+                <img
+                  src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhkNmZycXowMTgxMDltaGFleGpmczRwIiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0="
+                  alt=""
+                />
+                <p className="px-4 pb-2">Hacktoberfest 2022: Level 1</p>
+              </div>
+              <div className="card-hover w-40 text-xs text-gray-500 bg-gray-900 bg-opacity-80">
+                <img
+                  src="https://assets.holopin.io/eyJidWNrZXQiOiJob2xvcGluLWFzc2V0cyIsImtleSI6ImFzc2V0cy9jbDhlcTN6OWMwMzU3MDlsM2Z4OTluOHg2IiwiZWRpdHMiOnsicm90YXRlIjpudWxsfX0="
+                  alt=""
+                />
+                <p className="px-4 pb-2">Hacktoberfest 2022: Registered</p>
+              </div>
+            </div>
+
+            <Link
+              href="/showcase"
+              className="card-hover my-32 p-4 px-8 rounded-lg bg-indigo-700 border border-indigo-100 text-white hover:text-white font-bold text-lg cursor-pointer"
+            >
+              Next Topic - Portofolio
+            </Link>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </motion.div>
   );
 }

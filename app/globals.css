@@ -54,21 +54,21 @@ html {
 }
 
 .slide-in {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
-  background: #af4848;
+  background: #000;
   transform-origin: left;
 }
 
 .slide-out {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
-  background: #0f3cb9;
+  background: #000;
   transform-origin: right;
 }
