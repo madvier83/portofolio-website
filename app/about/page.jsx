@@ -160,13 +160,36 @@ export default function About() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono mt-8">
-        <Link
-          href="/"
-          className="cursor-pointer text-lg gap-2 pt-8 px-4 lg:px-8"
-        >
-          Adv.
-        </Link>
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
+        <div className="flex w-full items-end justify-start">
+          <Link
+            href={"/"}
+            className="text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+          >
+            Adv.
+          </Link>
+
+          <div className="flex ml-auto">
+            <Link
+              href={"/showcase"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+            >
+              Portofolio
+            </Link>
+            <Link
+              href={"/career"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+            >
+              Career
+            </Link>
+            <Link
+              href={"/connect"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+            >
+              Connect
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className="">

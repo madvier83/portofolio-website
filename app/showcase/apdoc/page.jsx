@@ -11,18 +11,30 @@ export default function Showcase() {
     <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
         <div className="flex w-full items-end justify-start">
-          <a className="pointer-events-none text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8">
+          <Link
+            href={"/"}
+            className="text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+          >
             Adv.
-          </a>
+          </Link>
+
+          <div className="flex ml-auto">
+            <Link
+              href={"/showcase"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+            >
+              Portofolio
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="">
         <div className="w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
-          <h1 className="text-6xl mb-12 font-semibold">Apdoc Clinic System</h1>
+          <h1 className="text-6xl mb-8 font-semibold">Apdoc Clinic System</h1>
           {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
 
-          <div className="rounded-lg flex-col bg-black h-72 flex items-center justify-start overflow-hidden">
+          <div className="rounded-lg flex-col bg-black h-96 flex items-center justify-start overflow-hidden">
             <Image
               className="flex-shrink-0 bg-cover min-w-full min-h-full rounded-lg"
               src="/apdoc2.png"
@@ -32,8 +44,9 @@ export default function Showcase() {
             />
           </div>
           <p className="paragraph text-gray-500 mt-8">
-            I have successfully designed and implemented an efficient clinic
-            information system with POS that integrates seamlessly with a
+            I have accomplished the design and successful implementation of a
+            highly efficient clinic information system with an integrated
+            point-of-sale (POS) system that seamlessly integrated with a
             user-friendly interface.
           </p>
           {/* <p className="paragraph text-gray-500 mt-4">
@@ -42,65 +55,80 @@ export default function Showcase() {
             to search for and manage their watched anime list.
           </p> */}
 
-          <h2 className="text-3xl mt-12 font-bold leading-relaxed tracking-wide">
+          <h2 className="text-3xl mt-24 font-bold leading-relaxed tracking-wide">
             Key Features
           </h2>
 
-          {/* <p className="paragraph text-white mt-4">
-            AI Implementation: Anime Search Using Images
+          <p className="paragraph text-white mt-8">Role-based Admin Access</p>
+          <p className="paragraph text-gray-500 mt-2">
+            Role-based admin access management system that empowers your
+            organization with comprehensive control and security over user
+            permissions. Designed to streamline and enhance administrative
+            operations, Role-based admin access ensures that your digital assets
+            and sensitive information are safeguarded while enabling efficient
+            collaboration and task delegation.
           </p>
-          <p className="paragraph text-gray-500">
-            I'm making use of the image search API provided by trace.moe, and
-            I've integrated the Flutter image picker library to access images
-            from the device and then transmit them to the API using the Dio
-            library with multipart form data.
-          </p>
-          <div className="flex gap-2 mt-4">
-            <div className="image-card h-full pt-4 overflow-hidden">
-              <Image
-                className="flex-shrink-0 bg-cover min-w-full min-h-full rounded-lg"
-                src="/malSearch1.png"
-                alt=""
-                width={720}
-                height={1600}
-              />
-            </div>
-            <div className="image-card h-full pt-4 overflow-hidden">
-              <Image
-                className="flex-shrink-0 bg-cover min-w-full min-h-full rounded-lg"
-                src="/malSearch2.png"
-                alt=""
-                width={720}
-                height={1600}
-              />
-            </div>
-            <div className="image-card h-full pt-4">
-              <Image
-                className="flex-shrink-0 bg-cover min-w-full min-h-full rounded-lg"
-                src="/malSearch3.png"
-                alt=""
-                width={720}
-                height={1600}
-              />
-            </div>
-          </div>
-          <p className="paragraph text-white mt-8">Anime List Display</p>
-          <p className="paragraph text-gray-500">
-            The application displays a list of anime from the MyAnimeList
-            database. For the sake of convenience, I've opted to utilize the
-            unofficial MyAnimeList API, which is jikan.moe.
-          </p>
-          <p className="paragraph text-white mt-8">Anime Details</p>
-          <p className="paragraph text-gray-500">
-            Users can view comprehensive information about each anime, including
-            a synopsis, rating, studio, and more.
-          </p>
-          <p className="paragraph text-white mt-8">Bookmark</p>
-          <p className="paragraph text-gray-500">
-            Users can save anime to a bookmark stored in Firestore, and the list
-            of saved bookmarks can be viewed on the bookmark page.
-          </p> */}
 
+          <div className="rounded-lg flex-col mt-8 bg-black flex items-center justify-start overflow-hidden">
+            <Image
+              className="flex-shrink-0 bg-cover min-w-full rounded-lg"
+              src="/apdoc-db-1.png"
+              alt=""
+              width={1050}
+              height={1401}
+            />
+          </div>
+
+          <p className="paragraph text-white mt-12">Receipt Customization</p>
+          <p className="paragraph text-gray-500 mt-2">
+            The Receipt Customization feature is a versatile tool that empowers
+            businesses to create, personalize, and fine-tune their receipts.
+          </p>
+          <p className="paragraph text-gray-500 mt-2">
+            feature provides the flexibility to design and customize receipts to
+            meet your unique branding, compliance, and record-keeping needs.
+          </p>
+
+          <div className="rounded-lg flex-col mt-8 bg-black flex items-center justify-start overflow-hidden">
+            <Image
+              className="flex-shrink-0 bg-cover min-w-full rounded-lg"
+              src="/apdoc-db-2.png"
+              alt=""
+              width={1050}
+              height={1401}
+            />
+          </div>
+
+          <p className="paragraph text-white mt-12">
+            Multiple Clinics Data Management
+          </p>
+          <p className="paragraph text-gray-500 mt-2">
+            The Multiple Clinics Data Management feature is a versatile tool
+            that empowers healthcare administrators and professionals to oversee
+            and access data from multiple clinics or healthcare facilities
+            within a single, centralized system. This feature streamlines data
+            handling, reporting, and analytics across various clinic locations,
+            offering a comprehensive and unified solution.
+          </p>
+
+          <div className="rounded-lg flex-col mt-8 bg-black flex items-center justify-start overflow-hidden">
+            <Image
+              className="flex-shrink-0 bg-cover min-w-full rounded-lg"
+              src="/apdoc-db-3.png"
+              alt=""
+              width={1050}
+              height={1401}
+            />
+          </div>
+
+          <p className="paragraph text-gray-500 mt-8">
+            In addition to the features mentioned, we have also successfully
+            implemented critical components, including data management, patient
+            queue management, purchase order management, and inventory
+            management, within our comprehensive system. You're invited to
+            explore these features and experience their seamless functionality
+            by clicking the link provided below.
+          </p>
           <div className="flex flex-col mb-32">
             <a
               target="_blank"
@@ -111,7 +139,7 @@ export default function Showcase() {
             </a>
             <Link
               href="/showcase"
-              className="card-hover mt-4 p-4 px-8 rounded-lg bg-indigo-500 border border-indigo-100 text-black hover:text-white font-bold text-lg cursor-pointer"
+              className="card-hover mt-4 p-4 px-8 rounded-lg bg-indigo-700 border border-indigo-100 text-white hover:text-white font-bold text-lg cursor-pointer"
             >
               Back To Topic - Portofolio
             </Link>

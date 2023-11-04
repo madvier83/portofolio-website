@@ -32,7 +32,7 @@ function MALViewer() {
   ];
 
   return (
-    <div className=" mt-4 flex flex-col gap-2  bg-opacity-60 rounded-lg ">
+    <div className="mt-4 flex flex-col gap-2  bg-opacity-60 rounded-lg ">
       <div className="rounded-lg flex-col bg-black h-72 flex items-center justify-center pt-10 overflow-hidden">
         <Image
           className="flex-shrink-0 bg-cover min-w-full min-h-full"

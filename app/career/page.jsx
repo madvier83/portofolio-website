@@ -8,9 +8,33 @@ export default function Career() {
     <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
         <div className="flex w-full items-end justify-start">
-          <a className="pointer-events-none text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8">
+          <Link
+            href={"/"}
+            className="text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+          >
             Adv.
-          </a>
+          </Link>
+
+          <div className="flex ml-auto">
+            <Link
+              href={"/about"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+            >
+              Introduction
+            </Link>
+            <Link
+              href={"/showcase"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+            >
+              Portofolio
+            </Link>
+            <Link
+              href={"/connect"}
+              className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+            >
+              Connect
+            </Link>
+          </div>
         </div>
       </div>
 
