@@ -16,9 +16,9 @@ export default function Connect() {
           <div className="flex w-full items-end justify-start">
             <Link
               href={"/"}
-              className="text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+              className="text-3xl flex place-items-center gap-2 pt-8 px-4 lg:px-8"
             >
-              Adv.
+              π
             </Link>
 
             <div className="flex ml-auto">

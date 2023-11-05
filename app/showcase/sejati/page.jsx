@@ -15,7 +15,7 @@ export default function Showcase() {
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
           <div className="flex w-full items-end justify-start">
             <a className="pointer-events-none text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8">
-              Adv.
+              π
             </a>
           </div>
         </div>

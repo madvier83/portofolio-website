@@ -18,14 +18,14 @@ export default function Home() {
           <div className="flex w-full items-end justify-start">
             <Link
               href={"/"}
-              className="text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+              className="text-3xl flex place-items-center gap-2 pt-8 px-4 lg:px-8"
             >
-              Adv.
+              𝜋
             </Link>
           </div>
         </div>
 
-        <div className="">
+        <div className="mb-12">
           <div className="flex flex-col items-center justify-center text-center w-full lg:w-[580px] mt-24 lg:mt-0">
             <h1 className="text-4xl lg:text-6xl mb-6 font-semibold">
               Advie Rifaldy
