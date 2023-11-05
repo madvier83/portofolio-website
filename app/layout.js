@@ -1,10 +1,7 @@
 "use client";
-import { AnimatePresence } from "framer-motion";
 import "./globals.css";
 import Head from "next/head";
-import { createContext } from "react";
-import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 // export const metadata = {
 //   title: "Advie Rifaldy",
@@ -12,6 +9,9 @@ import { useRouter } from "next/navigation";
 // };
 
 export default function RootLayout({ children, route }) {
+  useEffect(() => {
+    document.title = "Advie Rifaldy";
+  }, []);
   return (
     <html lang="en">
       <Head>
