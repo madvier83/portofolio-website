@@ -47,7 +47,12 @@ export default function Showcase() {
           </div>
         </div>
 
-        <div className="">
+        <motion.div
+          initial={{ y: 400, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className=""
+        >
           <div className="w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
             {/* <p className="opacity-25 leading-relaxed mb-4 uppercase tracking-widest">
             Frontend Developer
@@ -78,7 +83,7 @@ export default function Showcase() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
     </motion.div>
   );

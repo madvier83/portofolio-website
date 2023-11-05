@@ -32,7 +32,12 @@ export default function Showcase() {
           </div>
         </div>
 
-        <div className="">
+        <motion.div
+          initial={{ y: 400, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className=""
+        >
           <div className="w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
             <h1 className="text-6xl mb-8 font-semibold">MyAnimeList Viewer</h1>
             {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
@@ -155,7 +160,7 @@ export default function Showcase() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
     </motion.div>
   );

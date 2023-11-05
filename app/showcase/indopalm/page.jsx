@@ -14,13 +14,30 @@ export default function Showcase() {
       <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
           <div className="flex w-full items-end justify-start">
-            <a className="pointer-events-none text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8">
+            <Link
+              href={"/"}
+              className="text-3xl flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+            >
               π
-            </a>
+            </Link>
+
+            <div className="flex ml-auto">
+              <Link
+                href={"/showcase"}
+                className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+              >
+                Portofolio
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="">
+        <motion.div
+          initial={{ y: 400, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className=""
+        >
           <div className="w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
             <h1 className="text-6xl mb-12 font-semibold">Indopalm</h1>
             {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
@@ -45,9 +62,9 @@ export default function Showcase() {
             to search for and manage their watched anime list.
           </p> */}
 
-            <h2 className="text-3xl mt-12 font-bold leading-relaxed tracking-wide">
+            {/* <h2 className="text-3xl mt-12 font-bold leading-relaxed tracking-wide">
               Key Features
-            </h2>
+            </h2> */}
 
             {/* <p className="paragraph text-white mt-4">
             AI Implementation: Anime Search Using Images
@@ -120,7 +137,7 @@ export default function Showcase() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
     </motion.div>
   );

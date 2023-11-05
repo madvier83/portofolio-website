@@ -37,9 +37,11 @@ function Sejati() {
           Sejati Life
         </h2>
         <p className="text-gray-500 mt-2 leading-relaxed tracking-wide">
-          Company Profile of the Leading Manufacturer and Wholesale Supplier for
-          Indonesian Coconut Charcoal Briquettes.
+          Church Learning Management System. The application includes features
+          such as content customization, course completion, and daily quotes
+          from pastor.
         </p>
+
         <div className="flex flex-wrap gap-4 justify-between mt-4">
           <div className="flex gap-2">
             {sejatiStack.map((skill, index) => (

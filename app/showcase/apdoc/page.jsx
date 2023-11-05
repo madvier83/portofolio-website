@@ -32,7 +32,12 @@ export default function Showcase() {
           </div>
         </div>
 
-        <div className="">
+        <motion.div
+          initial={{ y: 400, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className=""
+        >
           <div className="w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
             <h1 className="text-6xl mb-8 font-semibold">Apdoc Clinic System</h1>
             {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
@@ -105,15 +110,15 @@ export default function Showcase() {
             </div>
 
             <p className="paragraph text-white mt-12">
-              Multiple Clinics Data Management
+              Multi Clinics Data Management
             </p>
             <p className="paragraph text-gray-500 mt-2">
-              The Multiple Clinics Data Management feature is a versatile tool
-              that empowers healthcare administrators and professionals to
-              oversee and access data from multiple clinics or healthcare
-              facilities within a single, centralized system. This feature
-              streamlines data handling, reporting, and analytics across various
-              clinic locations, offering a comprehensive and unified solution.
+              The Multi Clinics Data Management feature is a versatile tool that
+              empowers healthcare administrators and professionals to oversee
+              and access data from multiple clinics or healthcare facilities
+              within a single, centralized system. This feature streamlines data
+              handling, reporting, and analytics across various clinic
+              locations, offering a comprehensive and unified solution.
             </p>
 
             <div className="rounded-lg flex-col mt-8 bg-black flex items-center justify-start overflow-hidden">
@@ -150,7 +155,7 @@ export default function Showcase() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
     </motion.div>
   );

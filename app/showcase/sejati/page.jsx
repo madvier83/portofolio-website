@@ -14,13 +14,30 @@ export default function Showcase() {
       <main className="flex min-h-screen flex-col items-center justify-start lg:p-24">
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono">
           <div className="flex w-full items-end justify-start">
-            <a className="pointer-events-none text-lg flex place-items-center gap-2 pt-8 px-4 lg:px-8">
+            <Link
+              href={"/"}
+              className="text-3xl flex place-items-center gap-2 pt-8 px-4 lg:px-8"
+            >
               π
-            </a>
+            </Link>
+
+            <div className="flex ml-auto">
+              <Link
+                href={"/showcase"}
+                className="text-lg flex place-items-center gap-2 pt-8 px-2 lg:px-6"
+              >
+                Portofolio
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="">
+        <motion.div
+          initial={{ y: 400, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className=""
+        >
           <div className="w-screen px-5 lg:px-0 lg:w-[640px] mt-32">
             <h1 className="text-6xl mb-12 font-semibold">Sejati Life</h1>
             {/* <h1 className="text-3xl mb-6 font-semibold">Passion and Purpose</h1> */}
@@ -35,74 +52,72 @@ export default function Showcase() {
               />
             </div>
             <p className="paragraph text-gray-500 mt-8">
-              I developed a website that has enhanced the company's visibility
-              and provided a clear overview of the company to customers and
-              potential client with google analytics and decent SEO.
+              I'm pleased to share that I've successfully developed a
+              comprehensive earning Management System (LMS) utilizing the
+              Laravel framework. This LMS incorporates a range of essential
+              features as listed below.
             </p>
-            {/* <p className="paragraph text-gray-500 mt-4">
-            "MyAnimeList (MAL) Viewer" is an application created as a replica of
-            MyAnimeList, a popular website used by anime and movie enthusiasts
-            to search for and manage their watched anime list.
-          </p> */}
 
-            <h2 className="text-3xl mt-12 font-bold leading-relaxed tracking-wide">
+            <h2 className="text-3xl mt-24 font-bold leading-relaxed tracking-wide">
               Key Features
             </h2>
 
-            {/* <p className="paragraph text-white mt-4">
-            AI Implementation: Anime Search Using Images
-          </p>
-          <p className="paragraph text-gray-500">
-            I'm making use of the image search API provided by trace.moe, and
-            I've integrated the Flutter image picker library to access images
-            from the device and then transmit them to the API using the Dio
-            library with multipart form data.
-          </p>
-          <div className="flex gap-2 mt-4">
-            <div className="image-card h-full pt-4 overflow-hidden">
+            <p className="paragraph text-white mt-8">Login & Register</p>
+            <p className="paragraph text-gray-500 mt-2">
+              Users can easily register using their email addresses, and as an
+              added layer of security and convenience, this system incorporates
+              email verification. This ensures that each user's email is
+              validated, promoting a more secure and trustworthy environment.
+            </p>
+
+            <div className="mt-8 rounded-lg flex-col bg-black h-80 flex items-center justify-start overflow-hidden">
               <Image
-                className="flex-shrink-0 bg-cover min-w-full min-h-full rounded-lg"
-                src="/malSearch1.png"
+                className="flex-shrink-0 bg-cover min-w-full min-h-full"
+                src="/sejati2.png"
                 alt=""
-                width={720}
-                height={1600}
+                width={1050}
+                height={1401}
               />
             </div>
-            <div className="image-card h-full pt-4 overflow-hidden">
+
+            <p className="paragraph text-white mt-8">Course Customization</p>
+            <p className="paragraph text-gray-500 mt-2">
+              This customization feature allows administrators to personalize
+              the platform to align with the church's branding, create and
+              organize course content, manage user access and permissions, and
+              engage learners through interactive content. It empowers churches
+              to provide a unique and learning experience while tracking
+              progress effectively.
+            </p>
+
+            <div className="mt-8 rounded-lg flex-col bg-black flex items-center justify-start overflow-hidden">
               <Image
-                className="flex-shrink-0 bg-cover min-w-full min-h-full rounded-lg"
-                src="/malSearch2.png"
+                className="flex-shrink-0 bg-cover min-w-full min-h-full"
+                src="/sejati3.png"
                 alt=""
-                width={720}
-                height={1600}
+                width={1050}
+                height={1401}
               />
             </div>
-            <div className="image-card h-full pt-4">
+
+            <p className="paragraph text-white mt-8">Assessment Review</p>
+            <p className="paragraph text-gray-500 mt-2">
+              The Assessment Review feature enables instructors or
+              administrators to evaluate and analyze the results of assessments,
+              quizzes, tests, and assignments submitted by learners. It provides
+              a comprehensive overview of individual and group performance,
+              allowing for the identification of areas where improvement is
+              needed.
+            </p>
+            <div className="mt-8 rounded-lg flex-col bg-black h-80 flex items-center justify-start overflow-hidden">
               <Image
-                className="flex-shrink-0 bg-cover min-w-full min-h-full rounded-lg"
-                src="/malSearch3.png"
+                className="flex-shrink-0 bg-cover min-w-full min-h-full"
+                src="/sejati4.png"
                 alt=""
-                width={720}
-                height={1600}
+                width={1050}
+                height={1401}
               />
             </div>
-          </div>
-          <p className="paragraph text-white mt-8">Anime List Display</p>
-          <p className="paragraph text-gray-500">
-            The application displays a list of anime from the MyAnimeList
-            database. For the sake of convenience, I've opted to utilize the
-            unofficial MyAnimeList API, which is jikan.moe.
-          </p>
-          <p className="paragraph text-white mt-8">Anime Details</p>
-          <p className="paragraph text-gray-500">
-            Users can view comprehensive information about each anime, including
-            a synopsis, rating, studio, and more.
-          </p>
-          <p className="paragraph text-white mt-8">Bookmark</p>
-          <p className="paragraph text-gray-500">
-            Users can save anime to a bookmark stored in Firestore, and the list
-            of saved bookmarks can be viewed on the bookmark page.
-          </p> */}
 
             <div className="flex flex-col mb-32">
               <a
@@ -120,7 +135,7 @@ export default function Showcase() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
     </motion.div>
   );
