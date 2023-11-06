@@ -68,7 +68,7 @@ export default function Connect() {
             <div className="flex mb-32 flex-col">
               <a
                 target="_blank"
-                href="https://drive.google.com/file/d/1cjWYfIiU6EJL9AT-rhooHRFIbpKeDHNu/view"
+                href="https://drive.google.com/file/d/1sBhnZ3OrPccX-zmSpLCHIlk1016eKXcM/view?usp=sharing"
                 className="card-hover mt-16 p-4 px-8 rounded-lg bg-amber-500 border border-amber-100 text-black hover:text-white font-bold text-lg cursor-pointer"
               >
                 Get My Resume

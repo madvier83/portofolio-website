@@ -20,7 +20,7 @@ export default function Home() {
               href={"/"}
               className="text-3xl flex place-items-center gap-2 pt-8 px-4 lg:px-8"
             >
-              𝜋
+              π
             </Link>
           </div>
         </div>
